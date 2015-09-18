@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="runjunit" name="run and compile">
+    
+   
+    
+    <target name="runjunit" depends="compile">
+        
+         <path id="classtest.path">
+            <pathelement location="staging"></pathelement>
+		    <fileset dir="lib">
+			    <include name="**/*.jar" />
+		    </fileset>
+    </path>
+        
+         
+		<junit printsummary="on">
+		    <formatter type="brief" usefile="false"/>
+		    
+			<test name="Test1"></test>
+			<classpath refid="classtest.path">
+				
+			</classpath>
+		</junit>
+	</target>
+	
+    
+    
+	<target name="compile">
+	     <path id="class.path">
+		 <fileset dir="lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+		<javac includeantruntime="false" srcdir="./src" destdir="staging">
+		    
+			 
+			<classpath refid="class.path" />
+
+		</javac>
+
+
+
+
+	</target>
+</project>
