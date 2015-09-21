@@ -14,7 +14,7 @@
         
          
 		<junit printsummary="on">
-		    <formatter type="brief" usefile="false"/>
+		    <formatter type="xml" usefile="true" />
 		    
 			<test name="Test1"></test>
 			<classpath refid="classtest.path">
@@ -38,8 +38,9 @@
 
 		</javac>
 
-
-
-
-	</target>
+    </target>
+    
+	
+	    
+	
 </project>
